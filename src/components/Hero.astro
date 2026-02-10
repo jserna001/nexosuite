@@ -2,8 +2,15 @@
 
 ---
 
-<section class="py-20 sm:py-28 text-center">
-  <div class="max-w-3xl mx-auto px-4 space-y-6">
+<section class="relative py-20 sm:py-28 text-center overflow-hidden">
+  <!-- Gradient blobs -->
+  <div class="absolute inset-0 -z-10" aria-hidden="true">
+    <div class="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/15 blur-[100px]"></div>
+    <div class="absolute bottom-[-30%] right-[-10%] w-[400px] h-[400px] rounded-full bg-primary/10 blur-[120px]"></div>
+    <div class="absolute top-[10%] right-[15%] w-[250px] h-[250px] rounded-full bg-primary/8 blur-[80px]"></div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-4 space-y-6 relative">
     <div class="flex justify-center">
       <img
         src="/logo.svg"
