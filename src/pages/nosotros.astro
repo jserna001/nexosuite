@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Nosotros | Ecosistema Nexo por Cloution SAS"
+  description="Conoce a Cloution SAS, la empresa colombiana detras del Ecosistema Nexo. Software contable, punto de venta y herramientas fiscales en la nube."
+>
+  <Header />
+  <main class="py-12">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-3xl font-bold text-secondary mb-8">
+        Sobre <span class="text-primary">Nosotros</span>
+      </h1>
+
+      <div class="space-y-8">
+        <div class="bg-white border border-border rounded-[var(--radius-xl)] p-6 sm:p-8 shadow-[var(--shadow-card)] space-y-4">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="/logo.svg" alt="Nexo" width="36" height="36" />
+            <h2 class="text-xl font-bold text-secondary">Ecosistema Nexo</h2>
+          </div>
+          <p class="text-text-muted leading-relaxed">
+            Nexo es un ecosistema de herramientas en la nube creado para resolver
+            las necesidades reales de contadores y empresas colombianas. Cada
+            producto esta disenado para trabajar de forma independiente o
+            conectado con los demas, ofreciendo una experiencia integral.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4 pt-2">
+            <a href="https://nexocontable.cloution.cloud" target="_blank" rel="noopener noreferrer" class="block p-4 border border-border rounded-[var(--radius-lg)] hover:border-primary transition-colors no-underline">
+              <h3 class="font-semibold text-secondary">NexoContable</h3>
+              <p class="text-xs text-text-muted mt-1">Software contable en la nube con facturacion electronica y reportes DIAN.</p>
+            </a>
+            <a href="https://nexopos.cloution.cloud" target="_blank" rel="noopener noreferrer" class="block p-4 border border-border rounded-[var(--radius-lg)] hover:border-primary transition-colors no-underline">
+              <h3 class="font-semibold text-secondary">NexoPos</h3>
+              <p class="text-xs text-text-muted mt-1">Punto de venta con control de inventario y reportes en tiempo real.</p>
+            </a>
+            <a href="https://nexouvt.cloution.cloud" target="_blank" rel="noopener noreferrer" class="block p-4 border border-border rounded-[var(--radius-lg)] hover:border-primary transition-colors no-underline">
+              <h3 class="font-semibold text-secondary">NexoUVT</h3>
+              <p class="text-xs text-text-muted mt-1">Convertidor fiscal UVT con alertas inteligentes para contadores.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white border border-border rounded-[var(--radius-xl)] p-6 sm:p-8 shadow-[var(--shadow-card)] space-y-4">
+          <div class="flex items-center gap-3 mb-2">
+            <img src="/logs/logo-cloution.svg" alt="Cloution" width="32" height="32" />
+            <h2 class="text-xl font-bold text-secondary">Cloution SAS</h2>
+          </div>
+          <p class="text-text-muted leading-relaxed">
+            Cloution SAS es una empresa de tecnologia con sede en Bogota, Colombia.
+            Nos especializamos en el desarrollo de software en la nube para el
+            sector empresarial colombiano. Nuestro objetivo es simplificar la
+            gestion contable, fiscal y comercial de las empresas a traves de
+            herramientas modernas, accesibles y confiables.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2 text-sm">
+            <div class="flex items-center gap-2 text-text-muted">
+              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Bogota, Colombia
+            </div>
+            <div class="flex items-center gap-2 text-text-muted">
+              <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              <a href="mailto:contacto@cloutionsas.com" class="text-primary hover:underline">contacto@cloutionsas.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

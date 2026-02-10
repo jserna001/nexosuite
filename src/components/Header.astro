@@ -1,0 +1,38 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Inicio' },
+  { href: '/#productos', label: 'Productos' },
+  { href: '/nosotros', label: 'Nosotros' },
+  { href: '/privacidad', label: 'Privacidad' },
+];
+---
+
+<header class="bg-white border-b border-border sticky top-0 z-40">
+  <nav class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 no-underline">
+      <img src="/logo.svg" alt="Nexo" width="28" height="28" />
+      <span class="font-bold text-secondary text-sm">Ecosistema Nexo</span>
+    </a>
+    <div class="flex items-center gap-6">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'text-sm font-medium transition-colors no-underline hidden sm:inline',
+            currentPath === link.href ? 'text-primary' : 'text-text-muted hover:text-secondary',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="/#productos"
+        class="sm:hidden text-sm font-medium text-primary no-underline"
+      >
+        Productos
+      </a>
+    </div>
+  </nav>
+</header>

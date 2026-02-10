@@ -1,0 +1,73 @@
+---
+const products = [
+  {
+    name: 'NexoContable',
+    description:
+      'Software contable en la nube. Gestiona tu contabilidad, facturación electrónica y reportes DIAN desde cualquier lugar.',
+    url: 'https://nexocontable.cloution.cloud',
+  },
+  {
+    name: 'NexoPos',
+    description:
+      'Punto de venta inteligente. Control de inventario, facturación POS y reportes de ventas en tiempo real.',
+    url: 'https://nexopos.cloution.cloud',
+  },
+  {
+    name: 'NexoUVT',
+    description:
+      'Convertidor fiscal UVT 2026. Convierte UVT a pesos y viceversa con alertas fiscales inteligentes para contadores.',
+    url: 'https://nexouvt.cloution.cloud',
+  },
+];
+---
+
+<section class="py-16 scroll-mt-8" id="productos">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-secondary">
+        Nuestros <span class="text-primary">Productos</span>
+      </h2>
+      <p class="text-text-muted mt-2 max-w-lg mx-auto">
+        Herramientas conectadas diseñadas para contadores y empresas colombianas.
+      </p>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-3">
+      {
+        products.map((product) => (
+          <a
+            href={product.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group bg-white border border-border rounded-[var(--radius-xl)] p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1 transition-all no-underline"
+          >
+            <div class="mb-4">
+              <img src="/logo.svg" alt="Nexo" width="32" height="32" />
+            </div>
+            <h3 class="text-xl font-bold text-secondary group-hover:text-primary transition-colors">
+              {product.name}
+            </h3>
+            <p class="text-sm text-text-muted mt-2 leading-relaxed">
+              {product.description}
+            </p>
+            <div class="mt-4 flex items-center gap-1 text-sm font-medium text-primary">
+              <span>Ir al producto</span>
+              <svg
+                class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

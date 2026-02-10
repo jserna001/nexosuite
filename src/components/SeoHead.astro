@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const canonicalUrl = Astro.url.href;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:locale" content="es_CO" />
+<meta property="og:site_name" content="Ecosistema Nexo" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Cloution SAS" />
+<meta name="keywords" content="NexoContable, NexoPos, NexoUVT, software contable Colombia, punto de venta Colombia, UVT 2026, ecosistema Nexo" />
+<meta name="geo.region" content="CO" />
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Cloution SAS',
+  url: 'https://cloution.cloud',
+  description: 'Soluciones tecnológicas para empresas colombianas. Software contable, punto de venta y herramientas fiscales.',
+  brand: [
+    { '@type': 'Brand', name: 'NexoContable', url: 'https://nexocontable.cloution.cloud' },
+    { '@type': 'Brand', name: 'NexoPos', url: 'https://nexopos.cloution.cloud' },
+    { '@type': 'Brand', name: 'NexoUVT', url: 'https://nexouvt.cloution.cloud' },
+  ],
+})} />

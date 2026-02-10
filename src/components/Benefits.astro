@@ -1,0 +1,49 @@
+---
+const benefits = [
+  {
+    title: '100% en la nube',
+    description: 'Accede desde cualquier dispositivo, sin instalaciones. Tus datos siempre disponibles y seguros.',
+  },
+  {
+    title: 'Hecho para Colombia',
+    description: 'Cumplimiento DIAN, facturacion electronica y normativa fiscal colombiana integrada.',
+  },
+  {
+    title: 'Todo conectado',
+    description: 'Contabilidad, punto de venta y herramientas fiscales que se comunican entre si.',
+  },
+  {
+    title: 'Soporte dedicado',
+    description: 'Equipo local en Bogota listo para ayudarte. Atencion personalizada para tu negocio.',
+  },
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-secondary">
+        Por que elegir <span class="text-primary">Nexo</span>
+      </h2>
+      <p class="text-text-muted mt-2 max-w-lg mx-auto">
+        Tecnologia pensada para la realidad de las empresas colombianas.
+      </p>
+    </div>
+
+    <div class="grid gap-8 sm:grid-cols-2">
+      {benefits.map((b) => (
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 w-10 h-10 rounded-[var(--radius-md)] bg-primary/10 flex items-center justify-center">
+            <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-secondary">{b.title}</h3>
+            <p class="text-sm text-text-muted mt-1 leading-relaxed">{b.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
